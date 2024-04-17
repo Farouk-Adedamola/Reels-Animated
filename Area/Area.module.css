@@ -1,0 +1,205 @@
+.area {
+  position: relative;
+  height: 55vh;
+  top: 20vh;
+  background-size: cover;
+  background-color: #fff;
+  background-image: linear-gradient(
+      to right bottom,
+      #00c5cc24,
+      rgba(0, 0, 0, 0.547)
+    ),
+    url("../../../Assets/systemDarkImage.jpg");
+  padding-bottom: 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1 {
+  display: none;
+}
+
+.type {
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 2.1rem;
+  color: #00c4cc;
+  font-variant: small-caps;
+  transition: all 0.5s;
+  width: 80vw;
+  height: 15vh;
+  margin: 0 auto;
+  padding-top: 6rem;
+}
+
+.button {
+  background: #222222;
+  display: flex;
+  justify-content: center;
+  --color: #fff;
+  position: relative;
+  top: 6rem;
+  text-decoration: none;
+  color: var(--color);
+  padding: 20px;
+  transition: all 0.5s;
+  border: 3px solid var(--color);
+}
+
+.button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: inherit;
+  transition: width 0.25s 0.15s, height 0.25s;
+}
+
+.button::before {
+  top: -15px;
+  left: -15px;
+  border-width: 3px 0 0 3px;
+}
+
+.button::after {
+  bottom: -15px;
+  right: -15px;
+  border-width: 0 3px 3px 0;
+}
+
+.button:hover {
+  background: transparent;
+}
+
+.button:hover::before,
+.button:hover::after {
+  width: calc(100% + 27px);
+  height: calc(100% + 27px);
+}
+
+@media screen and (max-width: 300px) {
+  .button {
+    padding: 0.5rem;
+  }
+  .button a {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .area {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .area {
+    position: relative;
+    top: 13vh;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .area {
+    position: relative;
+    top: 10vh;
+  }
+  .main {
+    font-size: 2rem;
+    line-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .main h1 {
+    display: block;
+    line-height: 6rem;
+    width: 60vw;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 0;
+    padding-left: 2rem;
+  }
+
+  .main h1 span {
+    color: #00c4cc;
+  }
+
+  .type {
+    margin-top: -3rem;
+    margin-bottom: 0;
+    font-size: 2.3rem;
+  }
+
+  .button {
+    margin: 0 auto;
+    position: relative;
+    top: -2.2rem;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .area {
+    height: 100vh;
+    position: relative;
+    top: 20vh;
+  }
+
+  .type {
+    margin-top: -1rem;
+    margin-bottom: 0;
+    font-size: 2.3rem;
+  }
+
+  .button {
+    margin: 0 auto;
+    position: relative;
+    /* bottom: 0; */
+    top: 1rem;
+  }
+  .main h1 {
+    padding-top: 2rem;
+    /* padding-right: 2rem; */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main h1 {
+    margin-top: 4.5rem;
+    font-size: 6rem;
+    padding-right: 0;
+  }
+
+  .type {
+    margin-top: -1rem;
+    font-size: 4.5rem;
+    line-height: 5rem;
+    margin-bottom: 4rem;
+  }
+
+  .button {
+    margin-top: 1rem;
+  }
+  .main h1 {
+    padding-top: 2rem;
+    /* padding-right: 2rem; */
+  }
+}
